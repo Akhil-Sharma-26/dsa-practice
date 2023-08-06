@@ -1,4 +1,5 @@
 #include<iostream>
+#define N 30
 using namespace std;
 void printarr(int arr[],int size){
     for(int i=0;i<size;i++){
@@ -41,7 +42,7 @@ void search(int arr[],int size, int key){
 }
 int main(){
     int n=5;
-    int arr[n]={2,3,5,7,8};
+    int arr[N]={2,3,5,7,8};
     int x,pos,num1,key,count=0;
     while(1){
     cout<<endl<<"Hello world! \n select the operatio you want to perform: \n 1. Display \n 2. Insert \n 3. Deletion \n 4. Search \n 5. Exit"<<endl;
