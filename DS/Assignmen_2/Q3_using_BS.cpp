@@ -2,6 +2,7 @@
 // ? Missing elements in a sorted array. It's time complexity is O(log n)
 #include<iostream>
 using namespace std;
+bool one=false;
 void bubble(int arr[],int size){
     for(int i=0;i<size;i++){
         for(int j=0;j<size-i-1;j++){
@@ -30,7 +31,7 @@ void missing_usignBinarySearch(int arr[],int size){
         //     cout<<"hello";
         //     cout<<mid;
         // }
-        if(arr[mid]!=mid+1 && arr[mid]!=mid+1){
+        if(arr[mid]!=mid+1 ){
             end=mid-1;
             mid=(start+end)/2;
         }
@@ -38,12 +39,21 @@ void missing_usignBinarySearch(int arr[],int size){
             start=mid+1;
             mid=(start+end)/2;
         }
+        if(arr[0]!=1){
+            mid=1;
+            one=true;
+            break;
+        }
     }
-
+    if(one){
+        cout<<"missing is: 1";
+    }
+    else{
     cout<<endl<<"missing is: "<<mid+2;
+    }
 }
 int main(){
-    int arr[]={7,6,5,3,4,2};
+    int arr[]={7,6,5,3,4,1};
     int size=sizeof(arr)/sizeof(arr[0]);
     bubble(arr,size);
     missing_usignBinarySearch(arr,size);
