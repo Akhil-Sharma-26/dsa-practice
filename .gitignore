@@ -399,5 +399,5 @@ FodyWeavers.xsd
 
 
 # Custom
-.exe
-.out
+*.exe
+*.out
