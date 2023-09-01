@@ -60,7 +60,8 @@ class Queue{
             if(isEmpty()){
                 cout<<"quee if empty";
             }
-            for(int i=front;i<=rear;i=(i+1)%maxlen){ // ! condition for i to print all elements
+            for(i=front;i<=rear;i=(i+1)%maxlen){ // ! condition for i to print all elements 
+            // int nahi dalna hai for loop ke andar. QUIZ Question. i nahi update hoga varna bahar.
                 cout << items[i] << " ";
             }
             cout<<items[i];
