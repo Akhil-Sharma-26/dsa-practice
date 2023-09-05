@@ -3,6 +3,7 @@
 using namespace std;
 void display(queue<int>q){
     while(!q.empty()){
+        cout<<q.front();
         q.pop();
     }
 }
