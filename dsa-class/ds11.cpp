@@ -21,6 +21,6 @@ void insertAtPos(int pos){
 }
 
 // Question--> insert in a sorted array.
-while(temp!=NULL){
-    
-}
+// while(temp!=NULL){
+//     cout<<"hello";
+// }
