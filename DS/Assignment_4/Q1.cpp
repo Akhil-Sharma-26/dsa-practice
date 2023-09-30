@@ -78,6 +78,9 @@ public:
             temp->next = newnode;
         }
     };
+    void del(){
+
+    }
     void insertaftervalue(int num)
     {
     }
@@ -105,6 +108,13 @@ public:
     void del(){
 
     }
+
+    void insert_before(int x){
+        node * newnode=new node(1);
+        newnode->data=x;
+
+
+    }
 };
 int main()
 {
@@ -124,4 +134,8 @@ int main()
     hello.display();
     
     // node *next head=NULL;
+    
 }
+
+
+// do insertion, deletion, search.
