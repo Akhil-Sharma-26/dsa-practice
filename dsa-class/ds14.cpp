@@ -152,7 +152,10 @@ public:
             cout<<"empyy";
         }
         else{
-
+            node *temp = head;
+            head = head->next;
+            head->prev = NULL;
+            free(temp);
         }
     }
     void delFromEnd(){
@@ -196,5 +199,12 @@ public:
     }
 };
 int main(){
-
+    Linkedlist ll;
+    ll.insert_beg(24);
+    ll.insert_beg(4);
+    ll.insert_beg(2);
+    ll.display();
+    ll.delFromBeg();
+    // ll.delFromEnd();
+    ll.display();
 }
