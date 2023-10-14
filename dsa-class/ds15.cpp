@@ -97,7 +97,7 @@ void tree_insert(node* t,int z){
             x=x.right;
         }
     }
-    z.p=y;
+    z.p=y; // p=parent
     if(y==NULL){
         t.root = z; //tree was empty
     }
@@ -105,5 +105,5 @@ void tree_insert(node* t,int z){
         y.left = z;
         y.right = z;
     }
-    
+
 }
