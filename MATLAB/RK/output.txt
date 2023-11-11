@@ -1,0 +1,41 @@
+
+f =
+
+  function_handle with value:
+
+    @(x,y)-y+2*cos(x)
+
+
+a =
+
+     0
+
+
+b =
+
+     1
+
+
+h =
+
+    0.2000
+
+
+n =
+
+     5
+
+
+x =
+
+     0
+
+
+y =
+
+     1
+
+Index exceeds the number of array elements. Index must not exceed 1.
+
+Error in Rk (line 14)
+    k1=h*f(x(i+1),y(i+1))
