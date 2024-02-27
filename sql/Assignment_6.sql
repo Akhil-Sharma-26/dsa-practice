@@ -65,7 +65,7 @@ select sum(Salary) as total_salary, max(Salary) as max_salary, min(Salary) as mi
 
 -- Q7
 -- @block
-select emp2.Did,sum(Salary) as total_salary from emp2 INNER join department group by emp2.Did
+select emp2.Did,sum(Salary) as total_salary from emp2 group by emp2.Did
 
 
 
