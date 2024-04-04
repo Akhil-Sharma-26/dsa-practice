@@ -58,11 +58,20 @@ select Cname from Customers where City in(select City from SalesPeople group by 
 -- Q7
 select Cnum,sum(Amt) from Orders group by Cnum having sum(Amt)>=1200;
 -- Q8
-select Cname from Customers,SalesPeople where SalesPeople.City=Customers.City and SalesPeople.Snum = Customers.Snum;
--- BOTH ARE KINDA SAME. LEARN ABOUT EXIST MORE
 select Cname from Customers,SalesPeople where exists (select * from SalesPeople where SalesPeople.City=Customers.City and SalesPeople.Snum = Customers.Snum);
 -- Q9
-select 
+-- select Sname from SalesPeople where exists (select Sname from SalesPeople where comm>0.1 and Sname 
+
+
+-- extras
+select Snum,Sname from SalesPeople s where not exists(select * from Customers c where s.Snum = c.Snum);
+
+
+select Odate, count(distinct( Snum)) from Orders group by Odate;
+
+
+select count(*) from SalesPeople where (City,Comm) in (select City, Comm from SalesPeople group by City, Comm having count(*)>1);
+
 select * from SalesPeople;
 select * from Customers;
 select * from Orders;
