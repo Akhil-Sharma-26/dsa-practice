@@ -19,7 +19,6 @@ int main(int argc, char **argv)
     servaddr.sin_addr.s_addr = inet_addr("127.0.0.1");
     // inet_pton(AF_INET,"127.0.0.1",&(servaddr.sin_addr));
     connect(sockfd, (struct sockaddr *)&servaddr, sizeof(servaddr)); 
-
     while (1)
     {
         bzero(sendline, 100);
